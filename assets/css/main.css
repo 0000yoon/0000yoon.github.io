@@ -1993,6 +1993,11 @@ input, select, textarea {
 		text-align: center;
 	}
 
+        .wrapper.style0 {
+			background-image: none;
+			background-color: #ffffcc;
+		}
+
 		.wrapper.style1 {
 			background-image: none;
 			background-color: #fff;
