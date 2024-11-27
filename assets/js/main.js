@@ -32,3 +32,51 @@
 		});
 
 })(jQuery);
+
+
+//Swiper [s]
+//var atc01Swiper = new Swiper("#atc01 .slide", {
+//  effect: "creative",
+//  loop : "true",
+//  slidesPerView: '3',
+//  grabCursor: true,
+//  centeredSlides: true,
+//  slidesPerView: "auto",
+//  speed:600,
+//  autoplay: {
+//    delay: 1800,
+//    disableOnInteraction: false,
+//  },
+//  creativeEffect: {
+//    limitProgress:1,
+//    prev: {
+//      opacity:1,
+//      scale: 0.9,
+//      rotate:[0,25,0],
+//      translate: ["-50%", 0, -200],
+//    },
+//    next: {
+//      scale: 0.9,
+//      rotate:[0,-25,0],
+//      translate: ["50%", 0, -200],
+//    },
+//  },
+//  pagination: {
+//    el: '#atc01 .pager_dot',
+//    bulletClass: 'bullet',
+//    bulletActiveClass: 'active',
+//    type: 'bullets',
+//    clickable: true
+//  },
+//  breakpoints: {
+//    768: {
+//      creativeEffect: {
+//        limitProgress:2,
+//        prev: {
+//          opacity:0,
+//        },
+//      },
+//    },
+//  },
+//});
+//Swiper [e]
