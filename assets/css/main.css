@@ -16,7 +16,7 @@ a{text-decoration:none}
 
 #atc01{overflow:hidden;position:relative;z-index:2;padding:50px 50px 180px;font-size:15px;line-height:1.8;color:#111;font-family:var(--e-font), var(--k-font)}
 #atc01 .bg{display:block;width:130%;height:400px;position:absolute;bottom:0;left:-15%;border-radius:100%;background-color:#fff;transition:transform .6s var(--ani)}
-#atc01 .inner{display:flex;align-items: center;position:relative;width:1320px;margin:0 auto;padding-top:120px}
+#atc01 .inner{display:flex;align-items: center;position:relative;width:1320px;margin:0 auto;padding-top:0px}
 #atc01 .inner:after{display:block;content:"";visibility:hidden;clear:both}
 
 /* 텍스트 */
@@ -40,14 +40,29 @@ a{text-decoration:none}
 
 /* 이미지 */
 #atc01 .slide{position:relative;z-index:1;transform:translateY(80px);width:50%;margin-left:-90px}
-#atc01 .slide li{overflow:visible;width:400px;height:800px;text-align:center;color:#fff;transition-timing-function:var(--ani)}
+#atc01 .slide li{overflow:visible; width:auto; max-width:400px; height:auto; max-height:800px; text-align:center;color:#fff;transition-timing-function:var(--ani)}
 #atc01 .slide li .img{overflow:hidden;border-radius:26px;background-color:#000;transition:all .2s}
 #atc01 .slide li .img img{opacity:.7;transition:all .2s}
 #atc01 .slide .swiper-slide-active .img{box-shadow:34px 34px 60px rgba(0,0,0,.25)}
 #atc01 .slide .swiper-slide-active .img img{opacity:1}
 
 /* 반응형 [s] */
-@media (max-width:1500px){
+@media (min-width:2000px){
+#atc01 .inner{width:100%}
+#atc01 .txt_area{width:40%}
+#atc01 .txt_area .btxt{text-align:center;font-size:57px}
+#atc01 .txt_area .btxt b{font-size:57px}
+#atc01 .txt_area .btxt span{padding-left:0}
+#atc01 .txt_area .stxt2{padding-left:0;text-align:center}
+#atc01 .pager_dot{text-align:center;padding-right:0}
+#atc01 .slide{width:60%;margin-left:-120px}
+#atc01 .slide li{width:350px;height:600px}
+#atc01 .slide li .img{height:100%}
+#atc01 .view_btn:before{width:65px;height:65px}
+#atc01 .view_btn:hover:before{width:65px;height:65px}
+}
+
+@media (max-width:2000px){
 #atc01 .inner{width:100%}
 #atc01 .txt_area{width:40%}
 #atc01 .txt_area .btxt{text-align:center;font-size:57px}
@@ -63,7 +78,7 @@ a{text-decoration:none}
 }
 
 @media (max-width:1024px){
-#atc01{padding:50px 30px 100px}
+#atc01{padding:50px 30px 200px}
 #atc01 .slide{margin-left:-80px}
 #atc01 .slide li{width:250px;height:450px}
 #atc01 .slide li .img img{width:100%}
@@ -85,7 +100,7 @@ a{text-decoration:none}
 }
 
 @media (max-width:480px){
-#atc01{padding:30px 30px 80px}
+#atc01{padding:30px 30px 60px}
 #atc01 .inner{padding-top:30px}
 #atc01 .txt_area .btxt{margin:30px;font-size:33px}
 #atc01 .txt_area .btxt b{display:block;font-size:33px}
@@ -321,6 +336,81 @@ input, select, textarea {
 		footer > p {
 			font-size: 1.25em;
 		}
+
+
+
+
+/* Pagination 1 [s] */
+
+        	.pagination .pages {
+        		display: inline-block;
+        		font-family: 'Open Sans Condensed', sans-serif;
+        		font-weight: 700;
+        	}
+
+        		.pagination .pages span {
+        			display: inline-block;
+        			width: 1.5em;
+        			text-align: center;
+        			margin: 0 0.4em 0 0;
+        		}
+
+        		.pagination .pages a {
+        			cursor: pointer;
+        			display: inline-block;
+        			text-align: center;
+        			text-decoration: none;
+        			color: inherit;
+        			background-color: #e8e8e8;
+        			background-image: url("images/bg02.png");
+        			color: #565656;
+        			margin: 0 0.4em 0 0;
+        			border-radius: 0.4em;
+        			-moz-transition: background-color .25s ease-in-out;
+        			-webkit-transition: background-color .25s ease-in-out;
+        			-ms-transition: background-color .25s ease-in-out;
+        			transition: background-color .25s ease-in-out;
+        			box-shadow: inset 0 0.075em 0.25em 0 rgba(0, 0, 0, 0.1);
+        		}
+
+        			.pagination .pages a:hover {
+        				background-color: #dadada;
+        			}
+
+        			.pagination .pages a.active {
+        				background-color: #364050;
+        				color: #fff;
+        				box-shadow: none;
+        				text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
+        			}
+/* Pagination 1 [e] */
+/* Pagination 2 [s] */
+
+			.pagination {
+				padding: 3em 0 0 0;
+			}
+
+				.pagination .previous {
+					margin-right: 0.6em;
+				}
+
+				.pagination .next {
+					margin-left: 0.2em;
+				}
+
+				.pagination .pages a {
+					width: 2.75em;
+					height: 2.75em;
+					line-height: 2.75em;
+				}
+
+				.pagination .button {
+					height: 2.75em;
+					padding-top: 0;
+					padding-bottom: 0;
+					line-height: 2.75em;
+				}
+/* Pagination 2 [e] */
 
 /* Container */
 
@@ -1729,8 +1819,8 @@ input, select, textarea {
 	}
 
 		.image img {
-			display: block;
-			width: 100%;
+			/*display: block;*/
+			width: 80%;
 		}
 
 		.image.fit {
@@ -1760,86 +1850,90 @@ input, select, textarea {
 			}
 
 /* Button */
-	{
-		background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		-moz-transition: background-color .2s ease-in-out;
-		-webkit-transition: background-color .2s ease-in-out;
-		-ms-transition: background-color .2s ease-in-out;
-		transition: background-color .2s ease-in-out;
-		-webkit-appearance: none;
-		position: relative;
-		display: inline-block;
-		color: #fff !important;
-		text-decoration: none;
-		font-weight: 700;
-		border: 0;
-		outline: 0;
-		cursor: pointer;
-		border-radius: 8px;
-		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
-		overflow: hidden;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #111;
-		padding: 1em 2.35em 1em 2.35em;
-		font-size: 1em;
-		max-width: 24em;
-	}*/
+input[type="button"],
+   input[type="submit"],
+   input[type="reset"],
+   button,
+   .button {
+      background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+      background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+      background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+      background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+      -moz-transition: background-color .2s ease-in-out;
+      -webkit-transition: background-color .2s ease-in-out;
+      -ms-transition: background-color .2s ease-in-out;
+      transition: background-color .2s ease-in-out;
+      -webkit-appearance: none;
+      position: relative;
+      display: inline-block;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 700;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      border-radius: 8px;
+      text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
+      background-color: #43B3E0;
+      padding: 1em 2.35em 1em 2.35em;
+      font-size: 1.1em;
+      max-width: 24em;
+   }
 
-		input[type="button"]:hover,
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		button:hover,
-		.button:hover {
-			background-color: #fff;
-			color: #fff !important;
-		}
+      input[type="button"]:hover,
+      input[type="submit"]:hover,
+      input[type="reset"]:hover,
+      button:hover,
+      .button:hover {
+         background-color: #43bff0;
+         color: #fff !important;
+      }
 
-		input[type="button"]:active,
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		button:active,
-		.button:active {
-			background-color: #3BA8D3;
-			top: 1px;
-		}
+      input[type="button"]:active,
+      input[type="submit"]:active,
+      input[type="reset"]:active,
+      button:active,
+      .button:active {
+         background-color: #3BA8D3;
+         top: 1px;
+      }
 
-		input[type="button"].large,
-		input[type="submit"].large,
-		input[type="reset"].large,
-		button.large,
-		.button.large {
-			font-size: 1.5em;
-			letter-spacing: -0.025em;
-		}
+      input[type="button"].large,
+      input[type="submit"].large,
+      input[type="reset"].large,
+      button.large,
+      .button.large {
+         font-size: 1.5em;
+         letter-spacing: -0.025em;
+      }
 
-		input[type="button"].alt,
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		button.alt,
-		.button.alt {
-			background-color: #444;
-			box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2);
-		}
+      input[type="button"].alt,
+      input[type="submit"].alt,
+      input[type="reset"].alt,
+      button.alt,
+      .button.alt {
+         background-color: #444;
+         box-shadow: inset 0px 0px 0px 1px #242424, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2);
+      }
 
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background-color: #4f4f4f;
-				color: #fff !important;
-			}
+         input[type="button"].alt:hover,
+         input[type="submit"].alt:hover,
+         input[type="reset"].alt:hover,
+         button.alt:hover,
+         .button.alt:hover {
+            background-color: #4f4f4f;
+            color: #fff !important;
+         }
 
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background-color: #3f3f3f;
-			}
+         input[type="button"].alt:active,
+         input[type="submit"].alt:active,
+         input[type="reset"].alt:active,
+         button.alt:active,
+         .button.alt:active {
+            background-color: #3f3f3f;
+         }
 
 /* List */
 
@@ -2008,7 +2102,7 @@ input, select, textarea {
 
 	.box {
 		background: #fff;
-		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		/* box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
 		text-align: center;
 		padding: 2em;
 	}
@@ -2084,7 +2178,7 @@ input, select, textarea {
 
 	.wrapper {
 		background-image: url("images/bg.png");
-		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+		/*box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);*/
 		padding: 8em 0 8em 0;
 		text-align: center;
 	}
@@ -2097,6 +2191,7 @@ input, select, textarea {
 		.wrapper.style1 {
 			background-image: none;
 			background-color: #fff;
+			padding: 0em 0 8em 0;
 		}
 
 		.wrapper.style2 {
@@ -2355,7 +2450,7 @@ input, select, textarea {
 			}
 
 			h1, h2, h3, h4, h5, h6 {
-				font-size: 1.25em;
+				font-size: 1.7em;
 				margin: 0 0 0.4em 0;
 			}
 
@@ -2369,7 +2464,7 @@ input, select, textarea {
 			}
 
 				header > p {
-					font-size: 1.25em;
+					font-size: 1em;
 				}
 
 			footer {
@@ -2377,7 +2472,7 @@ input, select, textarea {
 			}
 
 				footer > p {
-					font-size: 1.25em;
+					font-size: 1em;
 				}
 
 			hr {
