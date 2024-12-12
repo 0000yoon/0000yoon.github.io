@@ -88,7 +88,7 @@
             <h2>Art Wrok</h2>
             <p>Discovering Fresh Perspectives in Familiar Life</p>
         </header>
-        <div class="row">
+        <div class="row" id="json_test">
             <div class="col-4 col-6-medium col-12-small">
                 <article class="box style2">
                     <a href="#" class="image featured"><img src="images/pic01.jpg" alt=""/></a>
@@ -220,6 +220,12 @@
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+
+ var html ='~~~제이슨 테스트~~~';
+        console.log("html : ", html);
+        $('#json_test').html(html);
+
+
 // JSON 파일 경로
     let jsonFilePath = './assets/json/main_data.json';
 
