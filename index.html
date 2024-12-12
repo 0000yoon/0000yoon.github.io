@@ -232,7 +232,7 @@
     $.getJSON(jsonFilePath, function(data) {
         // 호출이 성공하면 이 함수가 실행됩니다.
         console.log("load file : ", data);
-    var html = '<div><img src = \"images/'+ data.name+'\" width=\"200px\" height=\"auto\"></div>';
+    var html = '<div><img src = \"images/'+ data.picture+'\" width=\"200px\" height=\"auto\"> '+data.name+' </div>';
     $('#json_test').html(html);
     }).fail(function(jqXHR, textStatus, errorThrown) {
         // 호출이 실패하면 이 함수가 실행됩니다.
