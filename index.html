@@ -229,6 +229,9 @@
 // JSON 파일 경로
     let jsonFilePath = './assets/json/main_data.json';
 
+// JSON을 html 호출 test
+    var html = '<div>' + data.urls + '</div>;
+
     // JSON 파일 비동기적으로 호출
     $.getJSON(jsonFilePath, function(data) {
         // 호출이 성공하면 이 함수가 실행됩니다.
@@ -284,6 +287,9 @@
 			},
 			},
 			});
+
+
+
 
 
 </script>
