@@ -20,9 +20,6 @@
 
 </head>
 <body class="is-preload">
-<script>
-    alert('hello');
-</script>
 
 <!-- Nav -->
 <nav id="nav">
@@ -223,6 +220,20 @@
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+// JSON 파일 경로
+    let jsonFilePath = 'main_data.json';
+
+    // JSON 파일 비동기적으로 호출
+    $.getJSON(jsonFilePath, function(data) {
+        // 호출이 성공하면 이 함수가 실행됩니다.
+        console.log("load file : ", data);
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        // 호출이 실패하면 이 함수가 실행됩니다.
+        console.log(location.origin);
+        console.error('JSON 파일 호출 실패:', textStatus, errorThrown);
+    });
+
+
 			var atc01Swiper = new Swiper("#atc01 .slide", {
 			effect: "creative",
 			loop : "true",
@@ -267,6 +278,7 @@
 			},
 			},
 			});
+
 
 </script>
 
